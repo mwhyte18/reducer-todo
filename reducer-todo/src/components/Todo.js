@@ -5,7 +5,7 @@ const Todo = props => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    props.dispatch({ type: "ADD_TODO", payload: thisTodo });
+    props.dispatch({ type: "ADD_TODO", data: thisTodo });
   };
   const handleChange = e => {
     setThisTodo(e.target.value);
@@ -21,7 +21,7 @@ const Todo = props => {
       <form
         onSubmit={e => {
           e.preventDefault();
-          props.dispatch({ type: "ADD_TODO", payload: thisTodo });
+          props.dispatch({ type: "ADD_TODO", data: thisTodo });
           setThisTodo("");
         }}
       >
